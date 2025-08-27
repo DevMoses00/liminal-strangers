@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1syokymv0p1l"
+path="res://.godot/imported/Roomtone Night Loop.mp3-ae6ce9e2fb8253bf0c7a4742a7f1cbfa.mp3str"
+
+[deps]
+
+source_file="res://audio/bgs/Roomtone Night Loop.mp3"
+dest_files=["res://.godot/imported/Roomtone Night Loop.mp3-ae6ce9e2fb8253bf0c7a4742a7f1cbfa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

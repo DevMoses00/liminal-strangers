@@ -1,0 +1,160 @@
+[gd_scene load_steps=15 format=3 uid="uid://citnm5pqix453"]
+
+[ext_resource type="Texture2D" uid="uid://bdc6sm3m5ftag" path="res://art/fixed_blue/Top_blue.png" id="1_g7878"]
+[ext_resource type="Script" uid="uid://bsc2ldx0fpm6y" path="res://scenes/last_note.gd" id="1_xk20b"]
+[ext_resource type="Texture2D" uid="uid://djn4bs5y5r7nr" path="res://art/fixed_green/Untitled_Artwork 15.png" id="2_xk20b"]
+[ext_resource type="Texture2D" uid="uid://rnque15tvfiy" path="res://art/fixed_red/Top_Red.png" id="3_co2td"]
+[ext_resource type="Texture2D" uid="uid://dqabmix04b54p" path="res://art/fixed_blue/LBlue_mini.png" id="4_q4bpi"]
+[ext_resource type="Texture2D" uid="uid://c2xd6okee6aqo" path="res://art/fixed_green/Untitled_Artwork 19 (1).png" id="5_lruae"]
+[ext_resource type="Texture2D" uid="uid://t07ha0qdohsg" path="res://art/fixed_red/LRed_mini.png" id="6_iwhkf"]
+[ext_resource type="Texture2D" uid="uid://bbevcw2hcasl3" path="res://art/fixed_blue/RBlue_mini.png" id="7_lw6ba"]
+[ext_resource type="Texture2D" uid="uid://jnxero2fq8us" path="res://art/fixed_green/Untitled_Artwork 17 (1).png" id="8_3w5ln"]
+[ext_resource type="Texture2D" uid="uid://ftgx1d81k76v" path="res://art/fixed_red/RRed_mini.png" id="9_6i1no"]
+[ext_resource type="Texture2D" uid="uid://biu6lb23ewble" path="res://art/AUGUST (3).png" id="10_f54wg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vqvsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g7878")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xk20b")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_co2td")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wb8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_q4bpi")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lruae")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_iwhkf")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jefsc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lw6ba")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3w5ln")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6i1no")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}]
+
+[node name="LastNote" type="Node2D" node_paths=PackedStringArray("left_character", "right_character")]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_xk20b")
+left_character = NodePath("TOP3/LeftMini")
+right_character = NodePath("TOP3/RightMini")
+
+[node name="TOP1" type="AnimatedSprite2D" parent="." groups=["fixed"]]
+position = Vector2(0, 134)
+sprite_frames = SubResource("SpriteFrames_vqvsb")
+animation = &"red"
+autoplay = "red"
+
+[node name="TOP2" type="AnimatedSprite2D" parent="." groups=["fixed"]]
+position = Vector2(0, 423)
+sprite_frames = SubResource("SpriteFrames_vqvsb")
+animation = &"blue"
+autoplay = "blue"
+
+[node name="TOP3" type="AnimatedSprite2D" parent="." groups=["fixed"]]
+position = Vector2(-5, 730)
+sprite_frames = SubResource("SpriteFrames_vqvsb")
+animation = &"green"
+autoplay = "green"
+
+[node name="LeftMini" type="AnimatedSprite2D" parent="TOP3" groups=["fixed"]]
+position = Vector2(26, -423)
+sprite_frames = SubResource("SpriteFrames_6wb8p")
+animation = &"green"
+autoplay = "green"
+
+[node name="LeftMini" type="AnimatedSprite2D" parent="TOP3/LeftMini" groups=["fixed"]]
+position = Vector2(5, -307)
+sprite_frames = SubResource("SpriteFrames_6wb8p")
+animation = &"blue"
+autoplay = "blue"
+
+[node name="LeftMini2" type="AnimatedSprite2D" parent="TOP3/LeftMini" groups=["fixed"]]
+position = Vector2(5, -596)
+sprite_frames = SubResource("SpriteFrames_6wb8p")
+animation = &"red"
+autoplay = "red"
+
+[node name="RightMini" type="AnimatedSprite2D" parent="TOP3" groups=["fixed"]]
+position = Vector2(-35, -427)
+sprite_frames = SubResource("SpriteFrames_jefsc")
+animation = &"green"
+autoplay = "green"
+
+[node name="RightMini" type="AnimatedSprite2D" parent="TOP3/RightMini" groups=["fixed"]]
+position = Vector2(5, -307)
+sprite_frames = SubResource("SpriteFrames_jefsc")
+animation = &"blue"
+autoplay = "blue"
+
+[node name="RightMini2" type="AnimatedSprite2D" parent="TOP3/RightMini" groups=["fixed"]]
+position = Vector2(5, -596)
+sprite_frames = SubResource("SpriteFrames_jefsc")
+animation = &"red"
+autoplay = "red"
+
+[node name="Goodbye" type="Sprite2D" parent="."]
+position = Vector2(0, 42)
+texture = ExtResource("10_f54wg")
+
+[node name="Camera2D" type="Camera2D" parent="."]

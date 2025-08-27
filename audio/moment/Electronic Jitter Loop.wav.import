@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brgqd2vk66ihi"
+path="res://.godot/imported/Electronic Jitter Loop.wav-c751e8611076bdc8b0fb220138e8ca10.sample"
+
+[deps]
+
+source_file="res://audio/moment/Electronic Jitter Loop.wav"
+dest_files=["res://.godot/imported/Electronic Jitter Loop.wav-c751e8611076bdc8b0fb220138e8ca10.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
